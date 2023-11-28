@@ -1,0 +1,21 @@
+def read_myfile(filename):
+  
+  with open(filename, 'r') as file:        #opens the file 
+   contents=file.read()                    # Reading the contents in file
+   print(contents)                         # displaying the contents
+ 
+
+
+
+file=open("myfile.txt", 'w')     #creating file in write mode
+
+file.write("Hello There \n")      # writing into a file
+
+L=["This is Delhi \n","This is Paris \n","This is London \n"]
+file.writelines(L)        #adding  the lines in L to myfile
+
+file.close()             # closing the file
+
+filename="myfile.txt"     #specifying the filename that function read_myfile should use as argumnet
+
+read_myfile(filename)     #calling a function to display contents in a file

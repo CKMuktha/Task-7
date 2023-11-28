@@ -1,0 +1,28 @@
+# Program  to create an empty file with current timestamp  as name. 
+  
+# importing datetime module 
+import datetime 
+  
+# datetime.datetime.now() to get  
+# current date as filename. 
+filename = datetime.datetime.now() 
+  
+# create empty file 
+def create_file(): 
+    # Function creates an empty file 
+    # %d - date, %B - month, %Y - Year 
+    with open(filename.strftime("%d %B %Y")+".txt", "w") as file: 
+        file.write("") 
+    
+ 
+create_file()
+
+#b) content of file should have current timestamp
+
+# ct stores current time
+ct = datetime.datetime.now()
+print("current time:-", ct)
+ 
+# ts store timestamp of current time
+ts = ct.timestamp()
+print("timestamp:-", ts)
